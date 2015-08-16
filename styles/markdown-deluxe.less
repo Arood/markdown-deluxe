@@ -1,0 +1,35 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "syntax-variables";
+
+.item-views {
+  background: @syntax-background-color !important;
+}
+
+[data-markdown-deluxe="true"] {
+  margin: 0 auto;
+
+  &::shadow {
+    .markup.raw {
+      opacity: 0.6;
+    }
+    .gutter {
+      display: none;
+    }
+    .wrap-guide {
+      opacity: 0;
+    }
+    .editor--private {
+      .vertical-scrollbar {
+        opacity: 0;
+        transition: opacity .2s .1s;
+      }
+      &:hover .vertical-scrollbar {
+        opacity: 1;
+      }
+    }
+  }
+}
